@@ -1,27 +1,36 @@
 # Cara Menjalankan Program: Panduan Pengguna
 
-## Langkah-Langkah 
-1. Mempersiapkan Modul: Jalankan cell utama program untuk memuat modul-modul yang diperlukan.
-2. Pengisian Data: Ikuti alur pengisian data yang diminta oleh program.
-3. Input Data:
-* "TULIS": Masukkan keterangan dalam bentuk kata/kalimat sesuai contoh yang diberikan.
-* "INPUT": Masukkan angka sesuai contoh yang diberikan.
-4. Memproses Input:
-* Pesan Error: Jika muncul pesan "Maaf, mungkin anda memasukan input yang salah", ulangi input data dengan mengikuti keterangan yang diminta.
-5. Menjalankan Program:
-* Kegagalan: Jika program gagal dijalankan, isi kembali data-data sesuai dengan keterangan yang diminta.
-* Keberhasilan: Jika program berhasil dijalankan, output berupa STRUK PEMBAYARAN akan ditampilkan.
+Model ini mensimulasikan penyebaran COVID-19 di Provinsi Lampung berdasarkan data pada 1 April 2023. Terdapat dua kasus yang disimulasikan:
 
-## Catatan:
-* Pastikan mengikuti instruksi dan format input data dengan cermat.
-* Jika mengalami kesulitan, periksa kembali input data atau hubungi developer program.
+* Kasus 1: Tanpa Isolasi Mandiri
+Kasus ini mengasumsikan tidak adanya upaya khusus untuk mengurangi penularan, seperti isolasi mandiri.
 
-## Contoh Penggunaan:
-1. Jalankan cell utama program.
-2. Masukkan nama sesuai yang diminta.
-3. Masukkan jenis kendaraan (motor/mobil).
-4. Masukkan durasi parkir (jam).
-5. Tekan Enter untuk memproses input.
+* Kasus 2: Dengan Isolasi Mandiri
+Kasus ini memperhitungkan adanya upaya isolasi mandiri (social distancing) yang dapat mengurangi tingkat penularan.
 
-## Hasil:
-Jika input data benar, program akan menampilkan STRUK PEMBAYARAN dengan detail informasi seperti nama, jenis kendaraan, durasi parkir, dan total biaya.
+## Panduan Penggunaan:
+1. Eksekusi Program:
+  * Pastikan Python dan library yang dibutuhkan (numpy, scipy.integrate, matplotlib) terinstal.
+  * Jalankan kode program untuk kedua kasus (Kasus 1 dan Kasus 2).
+
+2. Interpretasi Hasil:
+  * Program akan menghasilkan grafik yang menampilkan:
+    * Model Penyebaran COVID-19: Menunjukkan tren keseluruhan populasi terinfeksi.
+    * Susceptible (Rentan Terinfeksi): Populasi yang belum terinfeksi.
+    * Infected (Terinfeksi): Populasi yang sedang terinfeksi.
+    * Recovered (Sembuh): Populasi yang sudah sembuh.
+  * Perhatikan perbedaan pola grafik pada kedua kasus untuk melihat pengaruh isolasi mandiri.
+
+## Parameter:
+* N: Total populasi (dapat disesuaikan sesuai data wilayah).
+* I0: Populasi awal yang terinfeksi (kasus awal).
+* R0: Populasi awal yang sudah sembuh.
+* beta: Tingkat penularan penyakit.
+* gamma: Tingkat kesembuhan.
+* rho (hanya Kasus 2): Efektivitas isolasi mandiri dalam mengurangi penularan (nilai antara 0 dan 1).
+
+## Sumber Data:
+https://dinkes.lampungprov.go.id/infografis-update-situasi-covid-19-provinsi-lampung-1-april-2023-pukul-15-00/
+
+## Disclaimer:
+Hasil simulasi ini adalah perkiraan berdasarkan model SIR dan data yang ada. Penyebaran penyakit sebenarnya dipengaruhi oleh berbagai faktor lain yang tidak tercakup dalam model ini.
